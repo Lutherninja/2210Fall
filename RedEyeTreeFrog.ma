@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: RedEyeTreeFrog.ma
-//Last modified: Sun, Sep 09, 2018 12:24:46 PM
+//Last modified: Sun, Sep 09, 2018 12:39:06 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,15 +15,15 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "D0A66173-48B3-A446-E0FA-D992D247F2E4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.5188980483042096 17.036736685802225 -51.058164325369155 ;
-	setAttr ".r" -type "double3" -13.538352708685006 -1614.1999999998836 0 ;
+	setAttr ".t" -type "double3" 5.2212809454849038 15.3693572066451 -34.972739933677829 ;
+	setAttr ".r" -type "double3" -20.138352708194486 -1623.4000000004919 0 ;
 	setAttr ".rp" -type "double3" -6.3060667798708891e-14 1.1990408665951691e-14 -4.5474735088646412e-13 ;
 	setAttr ".rpt" -type "double3" 4.898907321254365e-14 -1.3004464833256004e-13 1.0404848432369911e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D4DBDB02-4FF1-5353-9DC5-CAAA2FD0A01E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 54.943036040396812;
+	setAttr ".coi" 38.850717419812874;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5391,32 +5391,6 @@ createNode mesh -n "pSphereShape3" -p "pSphere3";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "pCylinder10";
-	rename -uid "22DFD69E-4C50-4639-D61F-62ABC9E78710";
-	setAttr ".t" -type "double3" 9.3679571095066247 2.9827483483484829 1.0744880781048303 ;
-	setAttr ".r" -type "double3" 0 0 -90.000000000000028 ;
-createNode mesh -n "pCylinderShape4" -p "pCylinder10";
-	rename -uid "1FF7733C-478D-0C56-0F26-CEAB1D0C9959";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.62812495231628418 0.76609492301940918 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt[0:21]" -type "float3"  -0.36625448 -6.3948846e-14 
-		0.24282056 -0.12134996 -6.3948846e-14 0.3928915 0.18136999 -6.3948846e-14 0.39289138 
-		0.42627439 -6.3948846e-14 0.24282056 0.51982003 -6.3948846e-14 -9.5609053e-08 0.42627427 
-		-6.3948846e-14 -0.24282083 0.18136981 -6.3948846e-14 -0.39289227 -0.12135005 -6.3948846e-14 
-		-0.39289233 -0.36625442 -6.3948846e-14 -0.24282086 -0.45980015 -6.3948846e-14 -8.8476376e-08 
-		-0.3541823 -0.50387257 -0.47966149 -0.13528554 -0.50387257 -0.77610785 0.13528559 
-		-0.50387257 -0.77610773 0.3541823 -0.50387257 -0.47966111 0.43779331 -0.50387257 
-		9.7280498e-08 0.35418221 -0.50387257 0.47966155 0.13528551 -0.50387257 0.77610785 
-		-0.1352856 -0.50387257 0.77610773 -0.35418224 -0.50387257 0.47966132 -0.54262811 
-		-0.50387257 4.8640249e-08 -5.2939559e-23 0 0 -2.7131524e-22 0 0;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "EB370383-4B3A-B253-6807-F8804CED6AA6";
 	setAttr -s 5 ".lnk";
@@ -6509,11 +6483,6 @@ createNode polyCylinder -n "polyCylinder1";
 	setAttr ".sa" 10;
 	setAttr ".sc" 1;
 	setAttr ".cuv" 3;
-createNode polyCylinder -n "polyCylinder2";
-	rename -uid "F640C89D-48FE-3835-431A-1D936CE52B2C";
-	setAttr ".sa" 10;
-	setAttr ".sc" 1;
-	setAttr ".cuv" 3;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -6532,7 +6501,7 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
-	setAttr -s 6 ".dsm";
+	setAttr -s 5 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 4 ".gn";
 select -ne :initialParticleSE;
@@ -6600,7 +6569,6 @@ connectAttr "lambert2SG.mwc" "pCylinder3Shape.iog.og[0].gco";
 connectAttr "groupId10.id" "pCylinder3Shape.iog.og[1].gid";
 connectAttr "Arms.mwc" "pCylinder3Shape.iog.og[1].gco";
 connectAttr "polyCylinder1.out" "pCylinderShape3.i";
-connectAttr "polyCylinder2.out" "pCylinderShape4.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
@@ -6771,7 +6739,6 @@ connectAttr "pCubeShape1.ciog.cog[2]" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape2.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape3.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
