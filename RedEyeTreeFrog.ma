@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: RedEyeTreeFrog.ma
-//Last modified: Sun, Sep 09, 2018 10:26:05 PM
+//Last modified: Sun, Sep 09, 2018 10:27:17 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -15,15 +15,15 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "D0A66173-48B3-A446-E0FA-D992D247F2E4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.8784518221154065 5.2214960282922025 19.055958056972141 ;
-	setAttr ".r" -type "double3" -374.73835221024359 -3228.2000000003591 0 ;
+	setAttr ".t" -type "double3" 18.7530871308687 8.6967452366116369 -14.667064747605679 ;
+	setAttr ".r" -type "double3" -371.13835221024516 -3110.9999999998149 0 ;
 	setAttr ".rp" -type "double3" -6.3060667798708891e-14 1.1990408665951691e-14 -4.5474735088646412e-13 ;
 	setAttr ".rpt" -type "double3" 4.898907321254365e-14 -1.3004464833256004e-13 1.0404848432369911e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D4DBDB02-4FF1-5353-9DC5-CAAA2FD0A01E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 12.186901011754044;
+	setAttr ".coi" 28.985267398025357;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5723,7 +5723,7 @@ createNode mesh -n "pCylinder13Shape" -p "pCylinder13";
 	setAttr -s 6 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.37642418593168259 ;
+	setAttr ".pv" -type "double2" 0.50000001490116119 0.4065857008099556 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -5741,9 +5741,9 @@ createNode mesh -n "pCylinder13Shape" -p "pCylinder13";
 	setAttr ".pt[334]" -type "float3" -1.8626451e-08 -3.3527613e-08 5.2154064e-08 ;
 	setAttr ".pt[335]" -type "float3" -2.4214387e-08 1.1920929e-07 -1.1175871e-08 ;
 	setAttr ".pt[363]" -type "float3" -2.9802322e-08 3.9115548e-08 9.3132257e-09 ;
-	setAttr ".pt[364]" -type "float3" 1.4901161e-08 -6.9383532e-08 1.1175871e-08 ;
+	setAttr ".pt[364]" -type "float3" 1.4901161e-08 -2.9802322e-08 -8.9406967e-08 ;
 	setAttr ".pt[373]" -type "float3" 2.9802322e-08 3.9115548e-08 9.3132257e-09 ;
-	setAttr ".pt[374]" -type "float3" -1.4901161e-08 -6.9383532e-08 1.1175871e-08 ;
+	setAttr ".pt[374]" -type "float3" -1.4901161e-08 -2.9802322e-08 -8.9406967e-08 ;
 	setAttr ".pt[682]" -type "float3" 1.4901161e-08 2.9802322e-08 9.3132257e-10 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
